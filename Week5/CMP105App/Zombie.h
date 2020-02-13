@@ -1,6 +1,8 @@
 #pragma once
 #include "Framework/GameObject.h"
 #include "Framework/Animation.h"
+#include "Level.h"
+
 	class Zombie : public GameObject
 {
 	public:
@@ -11,6 +13,7 @@
 		}
 
 		void update(float dt) override;
+		void handleInput(float dt);
 	protected:
 		Animation walk;
 };

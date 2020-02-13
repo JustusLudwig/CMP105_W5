@@ -1,5 +1,4 @@
 #include "Level.h"
-#include "Zombie.h"
 
 Level::Level(sf::RenderWindow* hwnd, Input* in)
 {
@@ -9,6 +8,7 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	zombTexture.loadFromFile("gfx/animZombie.png");
 	zombie.setSize(sf::Vector2f(55, 108));
 	zombie.setPosition(100, 100);
+	zombie.setInput(input);
 	zombie.setTexture(&zombTexture);
 
 	// initialise game objects
@@ -23,7 +23,12 @@ Level::~Level()
 // handle user input
 void Level::handleInput(float dt)
 {
-
+	// Close window on Escape pressed.
+	if (input->isKeyDown(sf::Keyboard::Escape))
+	{
+		window->close();
+	}
+	zombie.handleInput(dt);
 }
 
 // Update game objects

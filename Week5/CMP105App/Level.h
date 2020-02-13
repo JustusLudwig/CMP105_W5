@@ -1,6 +1,6 @@
 #pragma once
-#include "Zombie.h"
 
+#include "Zombie.h"
 #include <SFML/Graphics.hpp>
 #include "Framework/Input.h"
 #include "Framework/GameObject.h"
