@@ -1,4 +1,5 @@
 #pragma once
+#include "Zombie.h"
 
 #include <SFML/Graphics.hpp>
 #include "Framework/Input.h"
@@ -24,4 +25,7 @@ private:
 	// Default variables for level class.
 	sf::RenderWindow* window;
 	Input* input;
+
+	Zombie zombie;
+	sf::Texture zombTexture;
 };
